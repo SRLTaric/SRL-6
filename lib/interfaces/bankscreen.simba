@@ -98,6 +98,7 @@ const
   BANK_TABLE_BURTHORPE = 12;
   BANK_CHEST_PRIFDDINAS = 13;
   BANK_CHEST_BARB_OUTPOST = 14;
+  BANK_CHEST_CHAMPION = 15;
 
 (*
 type TRSBankScreen
@@ -2119,6 +2120,7 @@ begin
     BANK_TABLE_BURTHORPE: begin col1:= [14609385, 5, [2, [1.07, 1.41, 0.00]]]; col2:= [6457502, 5, [2, [0.15, 0.56, 0.00]]]; avelen:= 90; end;
     BANK_CHEST_PRIFDDINAS: begin col1:= [2729983, 12, [1, [0.07, 0.00, 0.00]]]; col2:= [7528447, 16, [2, [0.24, 0.00, 0.00]]]; avelen:= 90; end;
     BANK_CHEST_BARB_OUTPOST: begin col1:= [10258280, 19, [2, [0.06, 0.49, 0.00]]]; col2:= [3424082, 8, [2, [0.12, 0.21, 0.00]]]; avelen:= 300; end;
+    BANK_CHEST_CHAMPION: begin col1:= [2512288, 19, [2, [0.01, 0.51, 0.00]]]; col2:= [5002595, 9, [2, [0.14, 0.13, 0.00]]]; avelen:= 90; end;
   end;
 
   print('TRSBankscreen.__openChest()', TDebug.HEADER);
@@ -2360,7 +2362,7 @@ begin
     BANK_NPC_BLUE..BANK_NPC_DRAYNOR: result := self.__openNPC(bankType);
     BANK_BOOTH: result := self.__openBankBooth();
     BANK_GE: Result := Self.__openGE();
-    BANK_CHEST_SW..BANK_CHEST_BARB_OUTPOST: result := self.__openChest(bankType);
+    BANK_CHEST_SW..BANK_CHEST_CHAMPION: result := self.__openChest(bankType);
   end;
 end;
 
